@@ -1,8 +1,9 @@
 import { Lock, Mail, User2Icon } from "lucide-react";
 import React, { useState } from "react";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import api from "../configs/api";
 import toast from "react-hot-toast";
+import { login } from "../app/features/authSlice";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,6 @@ const Login = () => {
     email: "",
     password: "",
   });
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
